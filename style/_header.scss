@@ -1,0 +1,101 @@
+@import "./variables";
+@import "./mediaquaries";
+
+
+
+header{  
+    img{ width:  50px;
+         margin-left: 20px;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+         
+            transition: all 0.3s;
+          //  border-radius: 3px crimson;
+        }
+    }
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20px;
+ nav{
+    display:flex;
+    align-items: center;
+a{
+text-decoration: none;
+color: $text-color;
+&:hover{
+    color: crimson;
+    transition: all 0.5s;
+      transform: translateX(5px);
+}
+}
+ } 
+ #nav-left{
+  /*#bmw-logo1{
+    &:hover + body {
+      background: radial-gradient(circle at center,red, yellow, green);
+  }*/
+  
+  img{
+    mix-blend-mode: darken;
+    
+  }
+    a{//background-color: red;
+        padding: 0 20px;
+        border-right: 1px solid gray;
+     /* a href linki aralarındaki    sağdaki çizgi */
+   &:last-child{border-right: none;}
+    }
+ }  
+ #nav-right{ 
+gap: 30px;
+font-size: 15px;
+@include mobile{
+  display: none;
+}
+ }
+ .opener{ 
+  /* 1.hover 
+   &:hover {
+    display: flex;
+  } */
+  display:none;
+  position: absolute;
+  right: 0;
+  top: 85px;
+ /* bottom: -125px; alternatif yöntem */
+  background-color: rgb(220, 220, 220);
+  box-shadow: 2px 2px 10px;
+  /* 4 değer ister : x y  ne kadar dağıtacak? hangi renk dağıtacak? */
+
+  /* Y EKSENİNDE +LI DEĞER AŞAĞIDIR. */
+  flex-direction: column;
+   gap:20px;
+   padding: 5px;
+   border-radius: 10px;
+
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+ }
+ .menu{
+  width: 40px;
+  display: none;
+  @include mobile{
+    display: block;
+  }
+  &:hover +.opener {
+    display: flex;
+    background: radial-gradient(circle at center,green, yellow
+    ,);
+  }
+  /* 2.hover alternatifi  bu komutla hover sanki opener clasının altına yazılmış gibi oldu. :) */
+
+ }
+ //RENK CÜMBÜŞÜ:RADİAL-GRADİENT :) 
+ &:hover{background: radial-gradient(circle at center,green, yellow
+  ,);}
+}
+ 

@@ -1,0 +1,38 @@
+@import "./modules";
+@import "./mediaquaries";
+
+
+#interior{
+    h1,h2 ,h3, h4,h5,h6,p {
+        &:hover{
+            color: crimson;
+            transition: all 0.5s;
+              transform: translateX(5px);
+              background-color: transparent;
+            }
+    }
+    button{
+        &:hover{
+            background-color: transparent;
+            color: crimson;
+            font-weight: bolder;
+            border: 3px solid crimson;
+            
+          }
+    }
+   
+//background-color: yellowgreen;
+@extend %design;
+
+background-image: radial-gradient(rgba(0,0,0,0.5),black),
+url("../images/bmw-banner.jpeg");
+//.tek nokta aynı dizin ; .. iki nokta bir üst dizine geçiş demektir.
+//lineal gradidente  SAĞDAN SOLA GİBİ RADİAL GRADİENT İSE ÇEMBERİN MERKEZDEN ÇEVREYE GÖRE RENK DAĞITIR
+
+p{
+    font-size: 20px;
+    @include mobile{
+        font-size: 15px;
+    }  
+}
+}

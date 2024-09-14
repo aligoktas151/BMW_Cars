@@ -1,0 +1,116 @@
+@import "./modules";
+@import "./mediaquaries";
+     
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+  background: linear-gradient(rgb(215, 215, 215) 40%, $bg-color 40%);
+    /* MÜLAKAT SORUSUUU: RESİMLE ARKAPLANIN RENGİNİ AYNI YAPMA: img */
+    
+@include mobile{
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 40px;
+}
+@include laptop{
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+
+    .slogan{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: 500px;
+    @include mobile{
+     gap:20px;
+    }
+    
+    h1 {
+      @extend %heading;
+      font-size: 40px;
+      @include mobile {
+        text-align: center;
+      }
+
+  
+span {
+  font-family: "Times New Roman", Times, serif;
+}
+      &:hover{
+        color: crimson;
+        transition: all 0.5s;
+          transform: translateX(5px);
+
+    }
+    }
+    p{
+      @extend %p;
+      &:hover{
+        color: crimson;
+        transition: all 0.5s;
+          transform: translateX(5px);
+    }
+    }
+    img{
+   //   .bmw1{background: radial-gradient(circle at center, yellow, green, blue);}
+   //   .bmw2{background: radial-gradient(circle at center, red, yellow, green, blue);}
+
+      width: 200px;
+    }
+    h2{@extend %heading;
+      &:hover{
+        color: crimson;
+        transition: all 0.5s;
+          transform: translateX(5px);
+    }}
+button{
+  @extend %button;
+  background-color: crimson;
+  &:hover{background-color:rgb(168,16,46);
+  &:hover{
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+    border: 3px solid crimson;
+  }
+  }
+}  
+    }
+    .images{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:40px;
+  &-banner{
+    max-width: 800px;
+    @include laptop{
+      max-width: 500px;
+      
+    }
+  }
+&-track{
+  max-width: 400px;
+}
+p{
+  max-width: 500px;
+  text-align: center;
+  &:hover{
+    color: crimson;
+    transition: all 0.5s;
+      transform: translateX(5px);
+}
+}
+}
+        //RENK CÜMBÜŞÜ:RADİAL-GRADİENT :) 
+        &:hover{
+          background: radial-gradient(circle at center,red, yellow, green);}
+
+}
+

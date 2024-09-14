@@ -1,0 +1,54 @@
+@import "./modules";
+@import "./mediaquaries";
+
+
+#exterior{
+    @extend %design;
+    background-image: radial-gradient(rgba(0,0,0,0.3),black),url("../images/bmw-6.jpeg");
+
+    p{
+      font-size: 20px;
+      @include mobile{
+          font-size: 15px;}
+           //EKRAN 800PX 
+          //ALTINDAYSA font-size 10 px olsun
+        
+    @include laptop {
+              font-size: 10px;
+            }
+
+      
+      &:hover{color: crimson; }
+  }
+    
+    @include mobile{
+        gap: 40px;
+     }
+     @include laptop {
+        gap: 50px;
+      }
+      h1 {
+        &:hover{color: crimson; }
+        @include mobile {
+          font-size: 20px;
+        }
+      
+       
+   } 
+
+   
+   
+   
+   button{
+  
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: bold;
+    &:hover{
+        border: 3px solid crimson;
+        color: crimson;
+       
+        background-color: transparent;
+    }
+}
+}

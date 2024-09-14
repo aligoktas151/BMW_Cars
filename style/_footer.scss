@@ -1,0 +1,49 @@
+@import "./modules";
+@import "./mediaquaries";
+
+footer {
+    &:hover{
+       
+       background: radial-gradient(circle at center,white,blue, black);}
+       
+       //bmw renkleri  yaptım MAVİ BEYAZ VE SİYAH DİYE :) 
+        //BU IŞILTILI HAYATI BEN SEÇTİM :):):) 
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #000;
+  padding: 50px;
+  @include mobile {
+    flex-direction: column;
+    gap: 40px;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px; //TAM BİR LOGO OLSUN :) 
+    mix-blend-mode: unset;
+    //renk ve resim çakışmasın diye darken da arkaplan zaten siyah LOGO GÖZÜKMEZ.UNSET YAP.
+    
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    h2 {
+      @extend %heading;
+      color: white;
+      &:hover{
+        color: crimson;
+      }
+    }
+    a {
+        &:hover{
+            color: crimson;
+          }
+      text-decoration: none;
+      color: whitesmoke; //:) Please DON'T SMOKE    :(
+    }
+  }
+}
